@@ -2,6 +2,8 @@
 
 
 Mon test bus-dashboard: [![Binder](http://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/glouarn/ShinyApp-binder?urlpath=shiny/bus-dashboard/HEAD)
+Mon test2 bus-dashboard: [![Binder](http://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/glouarn/ShinyApp-binder/master?urlpath=shiny/bus-dashboard/)
+RShiny: [![Binder](http://mybinder.org/badge_logo.svg)](http://mybinder.org/v2/gh/binder-examples/r/master?urlpath=shiny/bus-dashboard/)
 
 
 ### URL addresses for RStudio and Shiny environments
