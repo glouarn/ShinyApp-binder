@@ -1,21 +1,4 @@
 
-library(shiny)
-library("corrplot")
-library("here")
-
-
-#dtoto
-path_ <- here::here()
-path_
-dat2 <- read.table(paste0(path_ ,"/", "tabletoto_corr.csv"), header=T, sep=";", dec=".")
-
-#moyenne
-tabres <- read.table(paste0(here::here(),"/","tabre_moy.csv"), header=T, sep=";", dec=".")
-
-ls_traits <- unique(dat2$nomTrait)
-ls_mng <- unique(dat2$MngN)
-
-
 
 # Define server logic required to draw a histogram
 shinyServer(function(input, output) {

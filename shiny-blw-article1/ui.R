@@ -1,22 +1,4 @@
 
-#
-
-library(shiny)
-library("shinyWidgets")
-library("here")
-
-#dtoto
-path_ <- here::here()
-path_
-dat2 <- read.table(paste0(path_ ,"/", "tabletoto_corr.csv"), header=T, sep=";", dec=".")
-
-#moyenne
-tabres <- read.table(paste0(path_,"/","tabre_moy.csv"), header=T, sep=";", dec=".")
-
-ls_traits <- unique(dat2$nomTrait)
-ls_mng <- unique(dat2$MngN)
-
-
 
 # Define UI for application that draws a histogram
 shinyUI(
