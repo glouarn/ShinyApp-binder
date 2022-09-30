@@ -7,6 +7,13 @@ Mon test2 bus-dashboard: [![Binder](http://mybinder.org/badge_logo.svg)](https:/
 
 Mon test test-app: [![Binder](http://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/glouarn/ShinyApp-binder/master?urlpath=shiny/test-app/)
 
+Mon test blw shiny: [![Binder](http://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/glouarn/ShinyApp-binder/master?urlpath=shiny/shiny-blw-article1/)
+
+Mon test blw rstudio: [![Binder](http://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/glouarn/ShinyApp-binder/master?urlpath=rstudio/shiny-blw-article1/)
+
+
+Mon test test-app: [![Binder](http://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/glouarn/ShinyApp-binder/master?urlpath=shiny/test-app/)
+
 
 RShiny: [![Binder](http://mybinder.org/badge_logo.svg)](http://mybinder.org/v2/gh/binder-examples/r/master?urlpath=shiny/bus-dashboard/)
 
