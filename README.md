@@ -4,11 +4,16 @@
 
 Mon test2 bus-dashboard: [![Binder](http://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/glouarn/ShinyApp-binder/master?urlpath=shiny/bus-dashboard/)
 
+
+Mon test test-app: [![Binder](http://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/glouarn/ShinyApp-binder/master?urlpath=shiny/test-app/)
+
+
 RShiny: [![Binder](http://mybinder.org/badge_logo.svg)](http://mybinder.org/v2/gh/binder-examples/r/master?urlpath=shiny/bus-dashboard/)
 
 
 
 Adaped from : https://github.com/binder-examples/r/tree/yuvipanda-patch-2
+
 Using docker image with R version 4.1
 
 ### URL addresses for RStudio and Shiny environments
