@@ -198,6 +198,8 @@ shinyServer(function(input, output) {
     # input parameter visualisation
     output$res_plot6 <- renderPlot({
         
+        layout(matrix(c(1,1,2),1,3))
+        
         m_ <- 2
         std_ <- max(0.005, input$CV) #0.005#15#30#15#30
         deltamax = 0.3*m_
@@ -294,14 +296,32 @@ shinyServer(function(input, output) {
     
     
     # Texte ----
+    output$res_text6 <- renderText({
+        paste0("Fig A: ...")
+    })
+    
     output$res_text1 <- renderText({
-        paste0(" ")
+        paste0("Fig B: ...")
     })
     
     output$res_text2 <- renderText({
-        paste0(" ")
+        paste0("Fig C: ...")
     })
     
+    output$res_text3 <- renderText({
+        paste0("Fig D: ...")
+    })
     
+    output$res_text4 <- renderText({
+        paste0("Fig E: ...")
+    })
+    
+    output$res_text5 <- renderText({
+        paste0("Fig F: ...")
+    })
+    
+    output$res_text7 <- renderText({
+        paste0("Fig G: ...")
+    })
     
 })

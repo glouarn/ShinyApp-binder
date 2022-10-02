@@ -6,8 +6,10 @@ shinyUI(
     fluidPage(
 
     # Application title
-    titlePanel("Impact of intraspecific genetic variability on interspecific competition: a theorical case study on binary mixtures"),
-
+    titlePanel(h2("Impact of intraspecific genetic variability on interspecific competition: a theorical case study on binary mixtures")),
+    headerPanel(h4("Authors: Beatrice WOLFF, Bernadette JULIER & Gaetan LOUARN")),
+    headerPanel(h5("article doi:...")),
+    
     # Sidebar with a slider input for number of bins
     sidebarLayout(
         sidebarPanel(
@@ -23,12 +25,12 @@ shinyUI(
             
             sliderInput("delta", label = "delta:",
                         min = -1.5, max = 1.5, value = 0., step = 0.5),
-        ),
+        width=3),
 
         
         # gestion multi-panneau
         mainPanel(
-        tabsetPanel(type = "tabs",
+        tabsetPanel(type = "tabs",id = "tabset",
                     tabPanel("A) Inputs", plotOutput("res_plot6"), textOutput("res_text6")),
                     tabPanel("B) Yield", plotOutput("res_plot1"), textOutput("res_text1")),
                     tabPanel("C) Sp. proportion", plotOutput("res_plot2"), textOutput("res_text2")),
@@ -40,9 +42,9 @@ shinyUI(
         ))
         
         
-        # Show a plot of the generated distribution
-        #mainPanel(
-        #    plotOutput("distPlot")
-        #)
-    )
+        
+        
+    ),
+    
+    
 ))
