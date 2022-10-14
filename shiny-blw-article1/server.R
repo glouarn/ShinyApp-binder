@@ -66,7 +66,7 @@ shinyServer(function(input, output) {
         boxplot(Yprop1~sc_val, subx, ylim=c(0,1.099), col=rgb(1,0.5,0.3, alpha=0.0), border=col_border, xlab="Mean trait divergence (delta)", ylab="p50s (sp1)", main="Sp. 1")
         polygon(c(x_+0.5, x_+1.5, x_+1.5,x_+0.5), c(0.,0.,0.95,0.95), col='light grey', border='light grey')
         segments(0.,0.5,8.,0.5)
-        points(1:7, subxmoy_ref$Yprop1, type='l', col='dark grey', lwd=2)
+        points(1:7, subxmoy_ref$Yprop1, type='l', col='dark grey', lwd=2, lty="dashed")
         boxplot(Yprop1~sc_val, subx, border=col_border, add=T, col=rgb(0, 0, 1, alpha = 0.1))
         segments(1:7,0.95,1:7, 0.95+subxmoy$stab, lwd=3)
         #arrows(1:7,0.95,1:7, 0.95+subxmoy$stab, lwd=3, length=0.05)
@@ -75,7 +75,7 @@ shinyServer(function(input, output) {
         boxplot(Yprop2~sc_val, subx, ylim=c(0,1.099), col=rgb(1,0.5,0.3, alpha=0.0), border=col_border, xlab="Mean trait divergence (delta)", ylab="p50s (sp2)", main="Sp. 2")
         polygon(c(x_+0.5, x_+1.5, x_+1.5,x_+0.5), c(0.,0.,0.95,0.95), col='light grey', border='light grey')
         segments(0.,0.5,8.,0.5)
-        points(1:7, subxmoy_ref$Yprop2, type='l', col='dark grey', lwd=2)
+        points(1:7, subxmoy_ref$Yprop2, type='l', col='dark grey', lwd=2, lty="dashed")
         boxplot(Yprop2~sc_val, subx, border=col_border, add=T, col=rgb(0, 0, 1, alpha = 0.1))
         segments(1:7,0.95,1:7, 0.95+subxmoy$stab, lwd=3)
         
@@ -106,13 +106,13 @@ shinyServer(function(input, output) {
         #gini1
         boxplot(gini1~sc_val, subx, ylim=c(0,1), col=rgb(1,0.5,0.3, alpha=0.0), border=col_border, main="Sp. 1", xlab="Mean trait divergence (delta)")
         polygon(c(x_+0.5, x_+1.5, x_+1.5,x_+0.5), c(0.,0.,0.95,0.95), col='light grey', border='light grey')
-        points(1:7, subxmoy_ref$gini1, type='l', col='dark grey', lwd=2)
+        points(1:7, subxmoy_ref$gini1, type='l', col='dark grey', lwd=2, lty="dashed")
         boxplot(gini1~sc_val, subx, border=col_border, add=T, col=rgb(0, 0, 1, alpha = 0.1))
         
         #gini2
         boxplot(gini2~sc_val, subx, ylim=c(0,1), col=rgb(1,0.5,0.3, alpha=0.0), border=col_border, main="Sp. 2", xlab="Mean trait divergence (delta)")
         polygon(c(x_+0.5, x_+1.5, x_+1.5,x_+0.5), c(0.,0.,0.95,0.95), col='light grey', border='light grey')
-        points(1:7, subxmoy_ref$gini2, type='l', col='dark grey', lwd=2)
+        points(1:7, subxmoy_ref$gini2, type='l', col='dark grey', lwd=2, lty="dashed")
         boxplot(gini2~sc_val, subx, border=col_border, add=T, col=rgb(0, 0, 1, alpha = 0.1))
         
         
@@ -182,7 +182,7 @@ shinyServer(function(input, output) {
         colnames(mat_) <- df$sc_val
         rownames(mat_) <- c("PARi","Nupt","Pscore Sp.1", "Pscore Sp.2", "RnonKin")#, "RKin" ,"Rlocal"
         
-        corrplot(mat_, main="titre")
+        corrplot(mat_, main="")
         
         #position cadre highlight
         x_ <- (input$delta+1.5)*2
@@ -279,13 +279,13 @@ shinyServer(function(input, output) {
         #CE
         boxplot(CE~sc_val, subx, ylim=c(-250, 250), col=rgb(1,0.5,0.3, alpha=0.0), border=col_border, main='Complementarity Effect (CE)', xlab="Mean trait divergence (delta)")
         polygon(c(x_+0.5, x_+1.5, x_+1.5,x_+0.5), c(-250,-250.,250,250), col='light grey', border='light grey')
-        points(1:7, subxmoy_ref$CE, type='l', col='dark grey')
+        points(1:7, subxmoy_ref$CE, type='l', col='dark grey', lty="dashed")
         boxplot(CE~sc_val, subx, border=col_border, add=T, col=rgb(0, 0, 1, alpha = 0.1))
         
         #SE
         boxplot(0.5*SE~sc_val, subx, ylim=c(-250, 250), col=rgb(1,0.5,0.3, alpha=0.0), border=col_border, main='Selecetion Effect (SE)', ylab="SE", xlab="Mean trait divergence (delta)")
         polygon(c(x_+0.5, x_+1.5, x_+1.5,x_+0.5), c(-250,-250.,250,250), col='light grey', border='light grey')
-        points(1:7, 0.5*subxmoy_ref$SE, type='l', col='dark grey')
+        points(1:7, 0.5*subxmoy_ref$SE, type='l', col='dark grey', lty="dashed")
         boxplot(0.5*SE~sc_val, subx, border=col_border, add=T, col=rgb(0, 0, 1, alpha = 0.1))
         
         
@@ -297,31 +297,31 @@ shinyServer(function(input, output) {
     
     # Texte ----
     output$res_text6 <- renderText({
-        paste0("Fig A: ...")
+        paste0("Fig A: Parameter distributions for Sp.1 and Sp.2 in the selected scenario from Wolff et al's  virtual experiment ")
     })
     
     output$res_text1 <- renderText({
-        paste0("Fig B: ...")
+        paste0("Fig B: Total annual yield (Ytot) and overyielding (OY) in simulated binary mixtures; grey boxes highlitght the position of the selected scenario")
     })
     
     output$res_text2 <- renderText({
-        paste0("Fig C: ...")
+        paste0("Fig C: Species proportion (p50s) for Sp.1 and Sp.2; Grey boxes highlitght the position of the selected scenario; Grey dashed line: reference species proportion at low within-species variability; Black vertical bars: stabilising effects of IV, representing reduced distance to a 0.5 proportion compared to the reference at low within-species variability")
     })
     
     output$res_text3 <- renderText({
-        paste0("Fig D: ...")
+        paste0("Fig D: Gini coefficients for Sp.1 and Sp.2; Grey boxes highlitght the position of the selected scenario; Grey dashed line: reference G value of the species at low within-species variability")
     })
     
     output$res_text4 <- renderText({
-        paste0("Fig E: ...")
+        paste0("Fig E: Shifts in D5param for the different parameters in Sp.1 and Sp.2 for the selected scenario; Black line: theoretical value of D5param in the absence of selection")
     })
     
     output$res_text5 <- renderText({
-        paste0("Fig F: ...")
+        paste0("Fig F: Correlations between plant biomass and plant resource aquisition (PARi, Nupt), multi-trait plant score (Pscore) and local partitioning of resources with neighbours from the other species (PARiNonKin); The red box highlitghts the position of the selected scenario")
     })
     
     output$res_text7 <- renderText({
-        paste0("Fig G: ...")
+        paste0("Fig G: Loreau & Hector's species complementarity effect (CE) and selection effect (SE) in simulated binary mixtures; Grey boxes highlitght the position of the selected scenario; Grey dashed line: reference value of the species at low within-species variability")
     })
     
 })
