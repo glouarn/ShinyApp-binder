@@ -6,7 +6,7 @@ shinyUI(
     fluidPage(
 
     # Application title
-    titlePanel(h2("Impact of intraspecific genetic variability on interspecific competition: a theorical case study of binary mixtures")),
+    titlePanel(h2("Impact of intraspecific genetic variation on interspecific competition: a theorical case study of binary mixtures")),
     headerPanel(h4("Authors: Beatrice WOLFF, Bernadette JULIER & Gaetan LOUARN")),
     headerPanel(h5("14/10/2022")),
     headerPanel(h5("article doi:...")),

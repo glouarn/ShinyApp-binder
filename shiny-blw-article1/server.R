@@ -305,11 +305,11 @@ shinyServer(function(input, output) {
     })
     
     output$res_text2 <- renderText({
-        paste0("Fig C: Species proportion (p50s) for Sp.1 and Sp.2; Grey boxes highlitght the position of the selected scenario; Grey dashed line: reference species proportion at low within-species variability; Black vertical bars: stabilising effects of IV, representing reduced distance to a 0.5 proportion compared to the reference at low within-species variability")
+        paste0("Fig C: Species proportion (p50s) for Sp.1 and Sp.2; Grey boxes highlitght the position of the selected scenario; Grey dashed line: reference species proportion at low within-species variation; Black vertical bars: stabilising effects of IV, representing reduced distance to a 0.5 proportion compared to the reference at low within-species variation")
     })
     
     output$res_text3 <- renderText({
-        paste0("Fig D: Gini coefficients for Sp.1 and Sp.2; Grey boxes highlitght the position of the selected scenario; Grey dashed line: reference G value of the species at low within-species variability")
+        paste0("Fig D: Gini coefficients for Sp.1 and Sp.2; Grey boxes highlitght the position of the selected scenario; Grey dashed line: reference G value of the species at low within-species variation")
     })
     
     output$res_text4 <- renderText({
@@ -321,7 +321,7 @@ shinyServer(function(input, output) {
     })
     
     output$res_text7 <- renderText({
-        paste0("Fig G: Loreau & Hector's species complementarity effect (CE) and selection effect (SE) in simulated binary mixtures; Grey boxes highlitght the position of the selected scenario; Grey dashed line: reference value of the species at low within-species variability")
+        paste0("Fig G: Loreau & Hector's species complementarity effect (CE) and selection effect (SE) in simulated binary mixtures; Grey boxes highlitght the position of the selected scenario; Grey dashed line: reference value of the species at low within-species variation")
     })
     
 })
