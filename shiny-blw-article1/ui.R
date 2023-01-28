@@ -39,6 +39,7 @@ shinyUI(
                     tabPanel("E) D5param", plotOutput("res_plot4"), textOutput("res_text4")),
                     tabPanel("F) Biomass Cor.", plotOutput("res_plot5"), textOutput("res_text5")),
                     tabPanel("G) CE-SE", plotOutput("res_plot7"), textOutput("res_text7")),
+                    #tabPanel("test", plotOutput("res_plotTest"), textOutput("res_textTest")),
                     
         ))
         

@@ -178,9 +178,12 @@ shinyServer(function(input, output) {
         df <- subxmoy[,c("sc_val","Cor_PARi","Cor_Nuptake","Fix0_Cor_ParamAllNorm", "Fix1_Cor_ParamAllNorm", "Cor_PARinonKin")]#,"Cor_PARiKin","Cor_PARivois"
         df <- df[order(df$sc_val),]
         
-        mat_ <- t(as.matrix(df[,c("Cor_PARi","Cor_Nuptake","Fix0_Cor_ParamAllNorm", "Fix1_Cor_ParamAllNorm", "Cor_PARinonKin")])) #,"Cor_PARiKin","Cor_PARivois"
+        #mat_ <- t(as.matrix(df[,c("Cor_PARi","Cor_Nuptake","Fix0_Cor_ParamAllNorm", "Fix1_Cor_ParamAllNorm", "Cor_PARinonKin")])) #,"Cor_PARiKin","Cor_PARivois"
+        mat_ <- t(as.matrix(df[,c("Cor_PARi","Cor_Nuptake","Fix0_Cor_ParamAllNorm", "Fix1_Cor_ParamAllNorm")])) #,"Cor_PARiKin","Cor_PARivois"
+        
         colnames(mat_) <- df$sc_val
-        rownames(mat_) <- c("PARi","Nupt","Pscore Sp.1", "Pscore Sp.2", "RnonKin")#, "RKin" ,"Rlocal"
+        #rownames(mat_) <- c("PARi","Nupt","Pscore Sp.1", "Pscore Sp.2", "RnonKin")#, "RKin" ,"Rlocal"
+        rownames(mat_) <- c("PARi","Nupt","Pscore Sp.1", "Pscore Sp.2")#, "RKin" ,"Rlocal"
         
         corrplot(mat_, main="")
         
@@ -292,6 +295,32 @@ shinyServer(function(input, output) {
         
     })
     
+    
+    #test
+    output$res_plotTest <- renderPlot({
+        
+        #mise a jour sous-tableau
+        subx <- dat2[dat2$MngN == input$traitN & dat2$nomTrait==input$scenar & dat2$sd_val==input$CV,]
+        
+        
+        
+        #couleur
+        col_border <- if(input$traitN == "N+") "red" else "blue"
+        
+        #position cadre highlight
+        x_ <- (input$delta+1.5)*2
+        
+        layout(matrix(1:2,1,2))
+        
+        #var_PARinonKin
+        boxplot(var_PARinonKin~sc_val, subx, ylim=c(0,100), col=rgb(1,0.5,0.3, alpha=0.0), border=col_border, main="non Kin", ylab="var_PARinonKin", xlab="Mean trait divergence (delta)")
+        
+        
+        #var_PARiKin
+        boxplot(var_PARiKin~sc_val, subx, ylim=c(0,100), col=rgb(1,0.5,0.3, alpha=0.0), border=col_border, main="Kin", Ylab="var_PARiKin", xlab="Mean trait divergence (delta)")
+        
+        
+    })
 
     
     
