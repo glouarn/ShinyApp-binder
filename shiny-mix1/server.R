@@ -67,7 +67,7 @@ shinyServer(function(input, output) {
         
         #res_sowing <- YtotvsProp(tabmoy, nom="", optProp="sowing", visuplot=T, visutext=F, colv=colv_)
         OverYvsAll(ls_tab, seletedkey, nom="", optProp="sowing", cex.lab=1, Ymax=650, colv=colv_)
-        text(0.15, -400,"OY = Ytot - Ytheo", col=colv_[2])
+        text(0.15, -400,"aOY = Ytot - Ytheo", col=colv_[2])
         text(0.15, -480,"All other mixtures", col=colv_[1])
         
         axis(1,col.ticks=collab)
@@ -151,7 +151,7 @@ shinyServer(function(input, output) {
         
         text(0.18, -550,"CE (complementarity)", col=col1)
         text(0.18, -480,"SE (selection)", col=col2)
-        text(0.18, -400,"OY = CE + SE", col=1)
+        text(0.18, -400,"aOY = CE + SE", col=1)
         
         axis(1,col.ticks=collab)
         axis(2,col.ticks=collab)
@@ -246,11 +246,11 @@ shinyServer(function(input, output) {
     })
     
     output$res_text2 <- renderText({
-        paste0("Fig C: Overyielding (OY, yellow line and red dots) in response to sowing proportions in the selected scenario; Grey dots represent all other simulated mixtures grown in the same environment; black line: zero overyielding  of theoretical reference mixture")
+        paste0("Fig C: Overyielding (aOY, yellow line and red dots) in response to sowing proportions in the selected scenario; Grey dots represent all other simulated mixtures grown in the same environment; black line: zero overyielding  of theoretical reference mixture")
     })
     
     output$res_text3 <- renderText({
-        paste0("Fig D: Overyielding (OY, black line and red dots) in response to sowing proportions in the selected scenario and decomposed in two additive components according to Loreau & Hector (2001): spcies complementarity effect (CE, blue) and selection effect (SE, red) ")
+        paste0("Fig D: Overyielding (aOY, black line and red dots) in response to sowing proportions in the selected scenario and decomposed in two additive components according to Loreau & Hector (2001): species complementarity effect (CE, blue) and selection effect (SE, red) ")
     })
     
     output$res_text4 <- renderText({
@@ -258,7 +258,7 @@ shinyServer(function(input, output) {
     })
     
     output$res_text5 <- renderText({
-        paste0("Fig F: Actual overyielding (aOY, yellow line and red dots) in response to actual species proportions in the selected scenario; Grey dots represent all other simulated mixtures grown in the same environment; black line: zero overyielding  of theoretical reference mixture")
+        paste0("Fig F: Overyielding (OY, yellow line and red dots) in response to actual species proportions in the selected scenario; Grey dots represent all other simulated mixtures grown in the same environment; black line: zero overyielding  of theoretical reference mixture")
     })
     
     output$res_text7 <- renderText({

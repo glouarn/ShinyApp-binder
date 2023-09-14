@@ -10,11 +10,13 @@ shinyUI(
     headerPanel(h4("Dataset from 'Towards intercrop ideotypes: non-random trait assembly can promote overyielding and stability of species proportion in simulated legume-based mixtures' ")),
     headerPanel(h4("Authors: Gaetan LOUARN")),
     headerPanel(h5("09/08/2018")),
+    tags$a(href="https://academic.oup.com/aob/article/126/4/671/5719429", "Louarn et al. (2020)"),
+    headerPanel(h5(" ")),
+    
+    
+    img(src="qr-code-shiny-mix1.png" , height="20%", width="20%", align="right"),
+    img(src="img-mix1.png" ,  height="40%", width="40%", align="left"),
     headerPanel(h5("article doi: 10.1093/aob/mcaa014")),
-    
-    
-    #img(src="qr-code-shiny-mix1.png" , height="20%", width="20%", align="right"),
-    #img(src="img-mix1.png" ,  height="25%", width="25%", align="right"),
     
     
     # Sidebar with a slider input for number of bins
