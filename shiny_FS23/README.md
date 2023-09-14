@@ -8,10 +8,10 @@ README for shiny-FS23
 
 ## 1. Online app link
 
-<img src="https://github.com/glouarn/ShinyApp-binder/blob/master/shiny-mix1/www/img-mix.png" alt="QR code" width="400">
+<img src="https://github.com/glouarn/ShinyApp-binder/blob/master/shiny_FS23/www/img-mix.png" alt="QR code" width="400">
 <img src="https://github.com/glouarn/ShinyApp-binder/blob/master/shiny-mix1/www/qr-code-binder-mix1.png" alt="QR code" width="200">
 
-Shiny mix1: [![Binder](http://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/glouarn/ShinyApp-binder/master?urlpath=shiny/shiny-FS23/)
+Shiny mix1: [![Binder](http://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/glouarn/ShinyApp-binder/master?urlpath=shiny/shiny_FS23/)
 
 
 
