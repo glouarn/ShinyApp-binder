@@ -14,7 +14,7 @@ shinyUI(
     headerPanel(h5(" ")),
     
     
-    img(src="qr-code-shiny-mix1.png" , height="20%", width="20%", align="right"),
+    img(src="qr-code-binder-mix1.png" , height="20%", width="20%", align="right"),
     img(src="img-mix1.png" ,  height="40%", width="40%", align="left"),
     headerPanel(h5("article doi: 10.1093/aob/mcaa014")),
     
