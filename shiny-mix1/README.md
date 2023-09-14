@@ -9,8 +9,8 @@ README for shiny-mix1
 ## 1. Online app link
 
 https://p3f-inrae.shinyapps.io/shiny-mix1/
-<img src="https://github.com/glouarn/ShinyApp-binder/blob/master/shiny-mix1/img-mix1.png" alt="QR code" width="400">
-<img src="https://github.com/glouarn/ShinyApp-binder/blob/master/shiny-mix1/qr-code-shiny-mix1.png" alt="QR code" width="200">
+<img src="https://github.com/glouarn/ShinyApp-binder/blob/master/shiny-mix1/www/img-mix1.png" alt="QR code" width="400">
+<img src="https://github.com/glouarn/ShinyApp-binder/blob/master/shiny-mix1/www/qr-code-shiny-mix1.png" alt="QR code" width="200">
 
 Shiny mix1: [![Binder](http://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/glouarn/ShinyApp-binder/master?urlpath=shiny/shiny-mix1/)
 

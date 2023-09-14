@@ -12,6 +12,11 @@ shinyUI(
     headerPanel(h5("09/08/2018")),
     headerPanel(h5("article doi: 10.1093/aob/mcaa014")),
     
+    
+    #img(src="qr-code-shiny-mix1.png" , height="20%", width="20%", align="right"),
+    #img(src="img-mix1.png" ,  height="25%", width="25%", align="right"),
+    
+    
     # Sidebar with a slider input for number of bins
     sidebarLayout(
         sidebarPanel(
