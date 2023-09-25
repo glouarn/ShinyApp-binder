@@ -232,7 +232,71 @@ shinyServer(function(input, output) {
     
     
     
+    output$img_Len <- renderImage({
+        
+        if (input$bw_Len == 0.) 
+        {imp <- "./www/Len_0.png"
+        } else if(input$bw_Len == 1.)
+        {imp <- "./www/Len_1.png"
+        } else 
+        {imp <- "./www/Len_-1.png"}
+        
+        
+        list(src = imp,
+             contentType = 'image/png',
+             width = "100%",
+             alt = "This is alternate text")
+        
+    }, deleteFile = FALSE)
     
+    
+    output$img_Vmax <- renderImage({
+        
+        if (input$bw_Vmax2 == 0.) 
+        {imp <- "./www/Vmax2_0.png"
+        } else if(input$bw_Vmax2 == 1.)
+        {imp <- "./www/Vmax2_1.png"
+        } else 
+        {imp <- "./www/Vmax2_-1.png"}
+        
+        list(src = imp,
+             contentType = 'image/png',
+             width = "100%",
+             alt = "This is alternate text")
+        
+    }, deleteFile = FALSE)
+    
+    
+    output$img_q <- renderImage({
+        
+        if (input$bw_q == 0.) 
+        {imp <- "./www/q_0.png"
+        } else if(input$bw_q == 1.)
+        {imp <- "./www/q_1.png"
+        } else 
+        {imp <- "./www/q_-1.png"}
+        
+        list(src = imp,
+             contentType = 'image/png',
+             width = "100%",
+             alt = "This is alternate text")
+        
+    }, deleteFile = FALSE)
+    
+    
+    output$img_MaxFix <- renderImage({
+        
+        if (input$groupN1 == "Legume") 
+        {imp <- "./www/MaxFix_1.png"
+        } else 
+        {imp <- "./www/MaxFix_0.png"}
+        
+        list(src = imp,
+             contentType = 'image/png',
+             width = "100%",
+             alt = "This is alternate text")
+        
+    }, deleteFile = FALSE)
 
     
     

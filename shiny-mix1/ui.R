@@ -27,7 +27,7 @@ shinyUI(
             radioButtons("nfert_level", label = "Environment:",  
                          choices = c('0N', '120N', '300N'), selected = '120N'),
             
-            selectInput("groupN1", label = "Sp1. functional group:",  choices = c("Legume", "Non-legume"), selected = "Legume"),
+            selectInput("groupN1", label = "Sp1. functional group:",  choices = c("Legume", "Non-legume"), selected = "Non-legume"),
             
             
             selectInput("groupN2", label = "Sp2. functional group:",  choices = c("Non-legume"), selected = "Non-legume"),
@@ -37,11 +37,12 @@ shinyUI(
             sliderInput("bw_Len", label = "Light foraging ('Len'):", 
                         min = -1, max = 1., value = 0., step = 1.),
             
-            sliderInput("bw_Vmax2", label = "Soil N foraging ('Vmax2'):", 
-                        min = -1, max = 1., value = 0., step = 1.),
             
             sliderInput("bw_q", label = "Temporal growth ('q'):", 
                         min = -1, max = 1., value = 0., step = 1.),
+
+            sliderInput("bw_Vmax2", label = "Soil N foraging ('Vmax2'):", 
+                        min = -1, max = 1., value = 0., step = 1.),            
             
             sliderInput("bw_RUE", label = "Ressource use ('RUEmax'):", 
                         min = -1., max = 0., value = 0., step = 0.5),
@@ -60,6 +61,13 @@ shinyUI(
                     tabPanel("C) Overyielding", plotOutput("res_plot2"), textOutput("res_text2")),
                     tabPanel("D) CE-SE", plotOutput("res_plot4"), textOutput("res_text3")),
                     tabPanel("E) LER", plotOutput("res_plot5"), textOutput("res_text4")),
+                    
+                    tabPanel("F) Traits", fluidRow(column(6,imageOutput("img_Len")),
+                                                               column(6,imageOutput("img_q")),
+                                                               column(6,imageOutput("img_Vmax")),
+                                                               column(6,imageOutput("img_MaxFix")),
+                                                                )),
+                    
                     #tabPanel("F) Actual OY", plotOutput("res_plot3"), textOutput("res_text3")),
                     
                     #tabPanel("G) CE-SE", plotOutput("res_plot7"), textOutput("res_text7")),
