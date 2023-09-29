@@ -7,10 +7,13 @@ README - App shiny - Fete de la Science 2023
 
 ## 1. Online app link
 
+https://p3f-inrae.shinyapps.io/shiny_FS23/
 <img src="https://github.com/glouarn/ShinyApp-binder/blob/master/shiny_FS23/www/img-mix.png" alt="QR code" width="400">
 <img src="https://github.com/glouarn/ShinyApp-binder/blob/master/shiny_FS23/www/qr-code-binder-FS23.png" alt="QR code" width="200">
 
-Shiny mix1: [![Binder](http://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/glouarn/ShinyApp-binder/master?urlpath=shiny/shiny_FS23/)
+
+
+Shiny FS23: [![Binder](http://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/glouarn/ShinyApp-binder/master?urlpath=shiny/shiny_FS23/)
 
 
 

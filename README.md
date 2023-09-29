@@ -6,6 +6,9 @@ Shiny test-app: [![Binder](http://mybinder.org/badge_logo.svg)](https://mybinder
 
 Shiny blw-article1: [![Binder](http://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/glouarn/ShinyApp-binder/master?urlpath=shiny/shiny-blw-article1/)
 
+Shiny mix1: [![Binder](http://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/glouarn/ShinyApp-binder/master?urlpath=shiny/shiny-mix1/)
+
+Shiny FS23: [![Binder](http://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/glouarn/ShinyApp-binder/master?urlpath=shiny/shiny_FS23/)
 
 
 Adaped from : https://github.com/binder-examples/r/tree/yuvipanda-patch-2
