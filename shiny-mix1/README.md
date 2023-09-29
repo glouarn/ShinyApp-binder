@@ -3,6 +3,7 @@
 README for shiny-mix1
 =========================
 [![DOI](https://zenodo.org/badge/223148621.svg)](https://doi.org/10.57745/GOKEQT)
+<script src="https://entrepot.recherche.data.gouv.fr/resources/js/widgets.js?persistentId=doi:10.57745/GOKEQT&amp;dvUrl=https://entrepot.recherche.data.gouv.fr&amp;widget=citation&amp;heightPx=150"></script>
 
 ## Overview
 
