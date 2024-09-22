@@ -6,10 +6,12 @@ shinyUI(
     fluidPage(
 
     # Application title
-    titlePanel(h2("Impact of intraspecific genetic variation on interspecific competition: a theorical case study of binary mixtures")),
+    titlePanel(h2("Impact of intraspecific genetic variation on interspecific competition:")),
+    titlePanel(h2("a theorical case study of forage binary mixtures")),
+    
     headerPanel(h4("Authors: Beatrice WOLFF, Bernadette JULIER & Gaetan LOUARN")),
     headerPanel(h5("14/10/2022")),
-    headerPanel(h5("article doi:...")),
+    headerPanel(h5("article doi: 10.3389/fpls.2024.1356506")),
     
     # Sidebar with a slider input for number of bins
     sidebarLayout(
@@ -34,10 +36,10 @@ shinyUI(
         tabsetPanel(type = "tabs",id = "tabset",
                     tabPanel("A) Inputs", plotOutput("res_plot6"), textOutput("res_text6")),
                     tabPanel("B) Yield", plotOutput("res_plot1"), textOutput("res_text1")),
-                    tabPanel("C) Sp. proportion", plotOutput("res_plot2"), textOutput("res_text2")),
+                    tabPanel("C) Com. stability", plotOutput("res_plot2"), textOutput("res_text2")),
                     tabPanel("D) Gini", plotOutput("res_plot3"), textOutput("res_text3")),
                     tabPanel("E) D5param", plotOutput("res_plot4"), textOutput("res_text4")),
-                    tabPanel("F) Biomass Cor.", plotOutput("res_plot5"), textOutput("res_text5")),
+                    tabPanel("F) Indiv. biomass", plotOutput("res_plot5"), textOutput("res_text5")),
                     tabPanel("G) CE-SE", plotOutput("res_plot7"), textOutput("res_text7")),
                     #tabPanel("test", plotOutput("res_plotTest"), textOutput("res_textTest")),
                     

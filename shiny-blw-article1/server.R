@@ -63,7 +63,7 @@ shinyServer(function(input, output) {
         layout(matrix(1:2,1,2))
         
         #p50S sp1
-        boxplot(Yprop1~sc_val, subx, ylim=c(0,1.099), col=rgb(1,0.5,0.3, alpha=0.0), border=col_border, xlab="Mean trait divergence (delta)", ylab="p50s (sp1)", main="Sp. 1")
+        boxplot(Yprop1~sc_val, subx, ylim=c(0,1.099), col=rgb(1,0.5,0.3, alpha=0.0), border=col_border, xlab="Mean trait divergence (delta)", ylab="Biomass proportion (sp1)", main="Sp. 1")
         polygon(c(x_+0.5, x_+1.5, x_+1.5,x_+0.5), c(0.,0.,0.95,0.95), col='light grey', border='light grey')
         segments(0.,0.5,8.,0.5)
         points(1:7, subxmoy_ref$Yprop1, type='l', col='dark grey', lwd=2, lty="dashed")
@@ -72,7 +72,7 @@ shinyServer(function(input, output) {
         #arrows(1:7,0.95,1:7, 0.95+subxmoy$stab, lwd=3, length=0.05)
         
         #p50s sp2
-        boxplot(Yprop2~sc_val, subx, ylim=c(0,1.099), col=rgb(1,0.5,0.3, alpha=0.0), border=col_border, xlab="Mean trait divergence (delta)", ylab="p50s (sp2)", main="Sp. 2")
+        boxplot(Yprop2~sc_val, subx, ylim=c(0,1.099), col=rgb(1,0.5,0.3, alpha=0.0), border=col_border, xlab="Mean trait divergence (delta)", ylab="Biomass proportion (sp2)", main="Sp. 2")
         polygon(c(x_+0.5, x_+1.5, x_+1.5,x_+0.5), c(0.,0.,0.95,0.95), col='light grey', border='light grey')
         segments(0.,0.5,8.,0.5)
         points(1:7, subxmoy_ref$Yprop2, type='l', col='dark grey', lwd=2, lty="dashed")
@@ -280,13 +280,13 @@ shinyServer(function(input, output) {
         layout(matrix(1:2,1,2))
         
         #CE
-        boxplot(CE~sc_val, subx, ylim=c(-250, 250), col=rgb(1,0.5,0.3, alpha=0.0), border=col_border, main='Complementarity Effect (CE)', xlab="Mean trait divergence (delta)")
+        boxplot(CE~sc_val, subx, ylim=c(-250, 250), col=rgb(1,0.5,0.3, alpha=0.0), border=col_border, main='Complementarity Effect (CE)', ylab="CE (g.m-2)", xlab="Mean trait divergence (delta)")
         polygon(c(x_+0.5, x_+1.5, x_+1.5,x_+0.5), c(-250,-250.,250,250), col='light grey', border='light grey')
         points(1:7, subxmoy_ref$CE, type='l', col='dark grey', lty="dashed")
         boxplot(CE~sc_val, subx, border=col_border, add=T, col=rgb(0, 0, 1, alpha = 0.1))
         
         #SE
-        boxplot(0.5*SE~sc_val, subx, ylim=c(-250, 250), col=rgb(1,0.5,0.3, alpha=0.0), border=col_border, main='Selecetion Effect (SE)', ylab="SE", xlab="Mean trait divergence (delta)")
+        boxplot(0.5*SE~sc_val, subx, ylim=c(-250, 250), col=rgb(1,0.5,0.3, alpha=0.0), border=col_border, main='Selecetion Effect (SE)', ylab="SE (g.m-2)", xlab="Mean trait divergence (delta)")
         polygon(c(x_+0.5, x_+1.5, x_+1.5,x_+0.5), c(-250,-250.,250,250), col='light grey', border='light grey')
         points(1:7, 0.5*subxmoy_ref$SE, type='l', col='dark grey', lty="dashed")
         boxplot(0.5*SE~sc_val, subx, border=col_border, add=T, col=rgb(0, 0, 1, alpha = 0.1))
@@ -334,7 +334,7 @@ shinyServer(function(input, output) {
     })
     
     output$res_text2 <- renderText({
-        paste0("Fig C: Species proportion (p50s) for Sp.1 and Sp.2; Grey boxes highlitght the position of the selected scenario; Grey dashed line: reference species proportion at low within-species variation; Black vertical bars: stabilising effects of IV, representing reduced distance to a 0.5 proportion compared to the reference at low within-species variation")
+        paste0("Fig C: Community stability represented by species proportion achieved over one year by Sp.1 and Sp.2 (p50s) at a 50/50 sowing; Grey boxes highlitght the position of the selected scenario; Grey dashed line: reference species proportion at low within-species variation; Black vertical bars: stabilising effects of IV, representing reduced distance to a 0.5 proportion compared to the reference at low within-species variation")
     })
     
     output$res_text3 <- renderText({
@@ -342,11 +342,11 @@ shinyServer(function(input, output) {
     })
     
     output$res_text4 <- renderText({
-        paste0("Fig E: Shifts in D5param for the different parameters in Sp.1 and Sp.2 for the selected scenario; Black line: theoretical value of D5param in the absence of selection")
+        paste0("Fig E: Contribution of the different plant parameters to within-species selection in Sp.1 and Sp.2 for the selected scenario; D5param: proportion of total population biomass represented by individuals in the top 5 deciles of values for a given parameter ;Black line: theoretical value of D5param in the absence of selection")
     })
     
     output$res_text5 <- renderText({
-        paste0("Fig F: Correlations between plant biomass and plant resource aquisition (PARi, Nupt), multi-trait plant score (Pscore) and local partitioning of resources with neighbours from the other species (PARiNonKin); The red box highlitghts the position of the selected scenario")
+        paste0("Fig F: Correlations between individual plant biomass, plant resource aquisition (PARi, Nupt) and average plant parameter score (Pscore) ; The red box highlitghts the position of the selected scenario")
     })
     
     output$res_text7 <- renderText({

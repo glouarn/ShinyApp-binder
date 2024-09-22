@@ -18,6 +18,7 @@ dat3 <- read.table("competAll_1v1NoVarLeg.csv", header=T, sep=";", dec=".") #leg
 #dat2 <- read.table("competAll_1v1VarAsso.csv", header=T, sep=";", dec=".") #asso
 #dat3 <- read.table("competAll_1v1VarLeg.csv", header=T, sep=";", dec=".") #leg
 #manque simul avec le 46 pour var
+#prevoir faire lecture plutot a partir des fichiers _allordered -> marche deja, mais manque les 46/46f dans ce cas?? / eviterai calcul pour ls_res
 
 ls_cases <- c("NonFix-NonFix", "NonFix-Fix", "Fix-Fix")
 ls_env <- c("0N- Shallow", "0N-Deep", "100N- Shallow", "100N-Deep","300N- Shallow", "300N-Deep")#sort(unique(dat1$EnvirOK))
@@ -114,6 +115,7 @@ for (dati in list(dat1,dat2,dat3))
     x$nom_trait <- as.vector(v_nom)
     x$Adv <- as.vector(v_adv)
     x$score <- as.numeric(v_points)
+    x$cas <- ls_cases[j]
     
     #boxplot(p50s~scenario, x, main=sp, las=3, ylim=c(0,1))
     
